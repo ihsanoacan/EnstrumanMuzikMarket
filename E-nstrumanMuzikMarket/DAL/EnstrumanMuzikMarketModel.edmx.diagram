@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f41d213b23e14bdb9f2ea6aea61fc569" Name="Diagram1" ZoomLevel="131">
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.District" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.City" Width="1.5" PointX="0.75" PointY="5.25" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_dbo_Districts_dbo_Cities_City_ID" />
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.AdminUser" Width="1.5" PointX="5.75" PointY="1.625" />
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.Category" Width="1.5" PointX="7.875" PointY="1.625" />
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.Product" Width="1.5" PointX="10.125" PointY="1.125" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_Product_Category" />
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.User" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.Address" Width="1.5" PointX="5.25" PointY="5.25" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Cities_City_ID" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Districts_District_ID" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Users_User_ID" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EnstrumanMuzikMarketDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DistrictName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="City_ID" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Districts_dbo_Cities_City_ID" FromRole="District" ToRole="City" />
+    <NavigationProperty Name="Address" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Districts_District_ID" FromRole="District" ToRole="Address" />
+  </EntityType>
+  <EntityContainer Name="EnstrumanMuzikMarketDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="District" EntityType="Self.District" />
+    <EntitySet Name="City" EntityType="EnstrumanMuzikMarketDBModel.City" />
+    <AssociationSet Name="FK_dbo_Districts_dbo_Cities_City_ID" Association="EnstrumanMuzikMarketDBModel.FK_dbo_Districts_dbo_Cities_City_ID">
+      <End Role="City" EntitySet="City" />
+      <End Role="District" EntitySet="District" />
+    </AssociationSet>
+    <EntitySet Name="AdminUser" EntityType="EnstrumanMuzikMarketDBModel.AdminUser" />
+    <EntitySet Name="Category" EntityType="EnstrumanMuzikMarketDBModel.Category" />
+    <EntitySet Name="Product" EntityType="EnstrumanMuzikMarketDBModel.Product" />
+    <AssociationSet Name="FK_Product_Category" Association="EnstrumanMuzikMarketDBModel.FK_Product_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <EntitySet Name="User" EntityType="EnstrumanMuzikMarketDBModel.User" />
+    <EntitySet Name="Address" EntityType="EnstrumanMuzikMarketDBModel.Address" />
+    <AssociationSet Name="FK_dbo_Addresses_dbo_Cities_City_ID" Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Cities_City_ID">
+      <End Role="City" EntitySet="City" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Addresses_dbo_Districts_District_ID" Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Districts_District_ID">
+      <End Role="District" EntitySet="District" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Addresses_dbo_Users_User_ID" Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Users_User_ID">
+      <End Role="User" EntitySet="User" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="District" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Districts_dbo_Cities_City_ID" FromRole="City" ToRole="District" />
+    <NavigationProperty Name="Address" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Cities_City_ID" FromRole="City" ToRole="Address" />
+  </EntityType>
+  <Association Name="FK_dbo_Districts_dbo_Cities_City_ID">
+    <End Type="EnstrumanMuzikMarketDBModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.District" Role="District" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="District">
+        <PropertyRef Name="City_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AdminUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="EnstrumanMuzikMarketDBModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Category_ID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Category" Relationship="EnstrumanMuzikMarketDBModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
+  </EntityType>
+  <Association Name="FK_Product_Category">
+    <End Type="EnstrumanMuzikMarketDBModel.Category" Role="Category" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Category_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="TcNo" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Address" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Users_User_ID" FromRole="User" ToRole="Address" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddressName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City_ID" Type="Int32" />
+    <Property Name="District_ID" Type="Int32" />
+    <Property Name="User_ID" Type="Int32" />
+    <Property Name="AddressDetail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="City" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Cities_City_ID" FromRole="Address" ToRole="City" />
+    <NavigationProperty Name="District" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Districts_District_ID" FromRole="Address" ToRole="District" />
+    <NavigationProperty Name="User" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Users_User_ID" FromRole="Address" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_dbo_Addresses_dbo_Cities_City_ID">
+    <End Type="EnstrumanMuzikMarketDBModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="City_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Addresses_dbo_Districts_District_ID">
+    <End Type="EnstrumanMuzikMarketDBModel.District" Role="District" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="District_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Addresses_dbo_Users_User_ID">
+    <End Type="EnstrumanMuzikMarketDBModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

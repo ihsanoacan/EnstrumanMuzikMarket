@@ -1,0 +1,57 @@
+﻿@using DAL;
+@model List<Address>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="bg0 p-t-104 p-b-116">
+    <div class="container">
+        <div class="flex-w flex-tr">
+            <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                <a href="@Url.Action("CreateAddress","Address")" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                    Adres Oluştur
+                </a>
+                <br />
+
+
+                <ul>
+                    @foreach (Address item in Model)
+                    {
+                    <li>
+                        <p>
+                            <b>
+                                Adres Adı:
+                            </b>
+                            <span>
+                                @item.AddressName
+                            </span>
+                        </p>
+                        <p>
+                            <b>
+                                Adres Detayı:
+                            </b>
+                            <span>
+                                @item.AddressDetail
+                            </span>
+                        </p>
+                        <a href="@Url.Action("Update",new { id = item.ID })">
+                            Güncelle
+                        </a>
+                        <a href="@Url.Action("Delete",new { id = item.ID })">
+
+                            Sil
+                        </a>
+                    </li>
+                        <br />
+                    }
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+

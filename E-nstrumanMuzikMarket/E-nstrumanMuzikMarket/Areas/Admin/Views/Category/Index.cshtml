@@ -1,0 +1,53 @@
+﻿@using DAL
+@model  List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+
+            <a href="@Url.Action("Add")" class="btn btn-primary-outline m-l"><i class="fa fa-plus"></i> ADD</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>CategoryName</th>
+                            <th>IsActive</th>
+                            <th>ImagePath</th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (Category category in Model)
+                        {
+
+                            <tr>
+                                <td>@category.ID</td>
+                                <td>@category.CategoryName</td>
+                                <td>@category.IsActive</td>
+                                <td><a href="@Url.Content("~/"+category.ImagePath)" target="_blank">Click Here</a></td>
+                                
+                                <td style="text-align: center">
+                                    <a href="@Url.Action("Edit", new { id = category.ID })" class="btn btn-warning btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></a>
+                                    <a href="@Url.Action("Delete",new { id = category.ID })" class="btn badge-danger btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i></a>
+
+
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+

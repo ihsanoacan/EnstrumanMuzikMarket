@@ -1,0 +1,101 @@
+﻿@using DAL;
+@model List<City>
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+}<section class="bg0 p-t-104 p-b-116">
+    <div class="container">
+        <div class="flex-w flex-tr">
+            <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                <form method="post" action="@Url.Action("Update")">
+                    <h4 class="mtext-105 cl2 txt-center p-b-30">
+                        Adresinizi Güncelleyin
+                    </h4>
+
+
+
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        <select class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" name="City_ID" id="cId" placeholder="Şehir" required>
+                            <option value="0">
+                                Şehir Seçiniz
+                            </option>
+
+                            @foreach (City item in Model)
+                            {
+                                if (ViewBag.cityId == item.ID)
+                                {
+                                    <option value="@item.ID" selected>
+                                        @item.CityName
+
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@item.ID">
+                                        @item.CityName
+
+                                    </option>
+                                }
+
+                            }
+
+                        </select>
+
+                    </div>
+
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        <select class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" name="District_ID" placeholder="İlçe" required>
+
+                            <option value="0">
+                                İlçe Seçiniz
+                            </option>
+
+                            @foreach (District item in ViewBag.districtList)
+                            {
+                                <option value="@item.ID">
+                                    @item.DistrictName
+                                </option>
+                            }
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="AddressDetail" placeholder="Adres Detayı" required>
+
+                    </div>
+
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="AddressName" placeholder="Adres Adı" required>
+
+                    </div>
+
+                    <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" type="submit">
+                        OLUŞTUR
+                    </button>
+
+
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $("#cId").on("change", function () {
+        var selectedId = $(this).val();
+        window.location.href = '@Url.Action("Update", "Address")' + '?cityId=' + selectedId;
+})
+    });
+</script>
+
+
+
+

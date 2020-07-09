@@ -1,0 +1,88 @@
+﻿@using DAL
+@model Product
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow mb-4">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="p-5">
+                <form class="user" method="post" action="@Url.Action("Edit")" enctype="multipart/form-data">
+                    <div class="form-group row">
+                        <div class="form-group col-sm-6 ">
+                            <input type="text" class="form-control" id="name" name="ProductName" placeholder="Name" value="@Model.ProductName" required>
+                        </div>
+                        <div class="form-group col-sm-6 ">
+                            <input type="text" class="form-control" id="name" name="Brandname" placeholder="Brand Name" value="@Model.BrandName" required>
+                        </div>
+                        <div class="form-group col-sm-6 ">
+                            <input type="text" class="form-control" id="name" name="Description" placeholder="Description" value="@Model.Description" required>
+                        </div>
+                        <div class="form-group col-sm-6 ">
+                            <input type="text" class="form-control" id="name" name="UnitPrice" placeholder="Unit Price" value="@Model.UnitPrice" required>
+                        </div>
+                        <div class="form-group col-sm-6 ">
+                            <input type="text" class="form-control" id="name" name="ProductCode" placeholder="Product Code" value="@Model.ProductCode" required>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <select class="form-control" id="isActive" name="IsActive" placeholder="IsActive" required>
+                                <option value="">Is Active?</option>
+                                @if (Model.IsActive == true)
+                                {
+                                    <option value="true" selected>Yes</option>
+                                    <option value="false">No</option>
+                                }
+                                else
+                                {
+                                    <option value="false" selected>No</option>
+                                    <option value="true">Yes</option>
+                                }
+
+                            </select>
+
+
+
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <select class="form-control" id="Category_ID" name="Category_ID" placeholder="Category_ID" required>
+                                <option value="">Category</option>
+                                @foreach (Category category in ViewBag.categoryList)
+                                {
+                                    if (Model.Category_ID == category.ID)
+                                    {
+                                        <option value="@category.ID" selected>@category.CategoryName</option>
+
+
+                                    }
+                                    else
+                                    {
+                                        <option value="@category.ID">@category.CategoryName</option>
+
+
+                                    }
+
+                                }
+
+                            </select>
+
+                            <div class="form-group col-sm-6 ">
+                                <input type="file" class="form-control" id="file" name="file">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Save</button>
+                        </div>
+
+
+                    </div>
+                    
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

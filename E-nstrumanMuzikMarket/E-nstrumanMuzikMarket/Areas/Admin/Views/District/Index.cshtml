@@ -1,0 +1,52 @@
+﻿@using DAL;
+@model List<District>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+
+        <a href="@Url.Action("Add")" class="btn btn-primary-outline m-l"><i class="fa fa-plus"></i> ADD</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>CityName</th>
+                        <th>Active</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (District district in Model)
+                    {
+
+                    <tr>
+                        <td>@district.ID</td>
+                        <td>@district.DistrictName</td>
+                        <td>@district.City.CityName</td>
+
+                        <td>@district.IsActive</td>
+                        <td style="text-align: center">
+                            <a href="@Url.Action("Edit", new { id = district.ID })" class="btn btn-warning btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></a>
+                            <a href="@Url.Action("Delete",new { id = district.ID })" class="btn badge-danger btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt"></i></a>
+
+
+                        </td>
+                    </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
