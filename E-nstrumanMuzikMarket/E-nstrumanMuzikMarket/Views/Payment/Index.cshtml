@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section class="bg0 p-t-104 p-b-116">
+        <div class="container">
+            <div class="flex-w flex-tr">
+                <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                    <form method="post" action="@Url.Action("Index","Payment")">
+                        <h4 class="mtext-105 cl2 txt-center p-b-30">
+                            Kart Bilgileriniz
+                        </h4>
+                        <input type="hidden" value="@ViewBag.addressId" name="AddressId" />
+
+                        <div class="bor8 m-b-20 how-pos4-parent">
+                            <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="NameOnCard" placeholder="Adınız ve Soyadınız" required>
+
+                        </div>
+
+                        <div class="bor8 m-b-20 how-pos4-parent">
+                            <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="CardNumber" placeholder="Kart No" required>
+
+                        </div>
+                        
+
+                        <div class="bor8 m-b-20 how-pos4-parent">
+                            <select class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" name="Month" placeholder="AY" required>
+                                <option value="0"> Ay </option>
+                                <option value="1"> 01 </option>
+                                <option value="2"> 02 </option>
+                                <option value="3"> 03 </option>
+                                <option value="4"> 04 </option>
+                                <option value="5"> 05 </option>
+                                <option value="6"> 06 </option>
+                                <option value="7"> 07 </option>
+                                <option value="8"> 08 </option>
+                                <option value="9"> 09 </option>
+                                <option value="10"> 10 </option>
+                                <option value="11"> 11 </option>
+                                <option value="12"> 12 </option>
+                            </select>
+                            <br />
+                            <br />
+                            <select class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" name="Year" placeholder="Yıl" required>
+                                <option value="0"> Yıl </option>
+                                <option value="1"> 2020</option>
+                                <option value="2"> 2021</option>
+                                <option value="3"> 2022</option>
+                                <option value="4"> 2023</option>
+                                <option value="5"> 2024</option>
+                                <option value="6"> 2025</option>
+                                <option value="7"> 2026</option>
+                                <option value="8"> 2027</option>
+                            </select>
+                            <br />
+                            <br />
+
+                            <div class="bor8 m-b-20 how-pos4-parent">
+                                <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="CVV" placeholder="Güvenlik Kodu" required>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" type="submit">
+                            Ödemeyi Tamamlayın
+                        </button>
+                        <br />
+
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+

@@ -14,6 +14,12 @@ namespace DAL
     
     public partial class Address
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Address()
+        {
+            this.Order = new HashSet<Order>();
+        }
+    
         public int ID { get; set; }
         public string AddressName { get; set; }
         public Nullable<int> City_ID { get; set; }
@@ -24,5 +30,7 @@ namespace DAL
         public virtual City City { get; set; }
         public virtual District District { get; set; }
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

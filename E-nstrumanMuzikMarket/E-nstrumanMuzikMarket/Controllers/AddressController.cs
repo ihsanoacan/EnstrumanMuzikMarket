@@ -127,15 +127,6 @@ namespace E_nstrumanMuzikMarket.Controllers
         }
 
 
-
-
-
-
-
-
-
-
-
         public ActionResult Delete(int Id)
         {
             try
@@ -157,6 +148,22 @@ namespace E_nstrumanMuzikMarket.Controllers
             {
                 return RedirectToAction("Index", "Error", new { msg = ex.Message });
             }
+        }
+
+        public ActionResult AddressSelect()
+        {
+            if (Session["UserSession"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+           
+            User u = Session["UserSession"] as User;
+            AddressService srv = new AddressService();
+            List<Address> addressList = srv.GetAll().ToList();
+            addressList = addressList.Where(x => x.User_ID == u.ID).ToList();
+
+            return View(addressList);
+
         }
 
 

@@ -9,3 +9,14 @@ F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\DAL\
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\DAL\obj\Debug\DAL.dll
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\DAL\obj\Debug\DAL.pdb
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\bin\Debug\DAL.dll.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\bin\Debug\DAL.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\bin\Debug\DAL.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\bin\Debug\EntityFramework.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\bin\Debug\EntityFramework.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\obj\Debug\DAL.csproj.CopyComplete
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\obj\Debug\DAL.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\obj\Debug\DAL.pdb

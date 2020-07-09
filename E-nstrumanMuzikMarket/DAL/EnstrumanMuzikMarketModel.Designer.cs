@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\DAL\EnstrumanMuzikMarketModel.edmx'. 
+﻿// T4 code generation is enabled for model 'F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\DAL\EnstrumanMuzikMarketModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

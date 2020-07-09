@@ -12,27 +12,25 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Order()
         {
-            this.Address = new HashSet<Address>();
-            this.Order = new HashSet<Order>();
+            this.OrderProduct = new HashSet<OrderProduct>();
         }
     
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
-        public Nullable<System.DateTime> BirthDate { get; set; }
-        public string TcNo { get; set; }
+        public Nullable<System.Guid> OrderNo { get; set; }
+        public Nullable<int> Address_ID { get; set; }
+        public Nullable<int> User_ID { get; set; }
+        public Nullable<System.DateTime> OrderDate { get; set; }
+        public string PaymentRefNo { get; set; }
+        public Nullable<System.Guid> ShippingNo { get; set; }
     
+        public virtual Address Address { get; set; }
+        public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Address> Address { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<OrderProduct> OrderProduct { get; set; }
     }
 }

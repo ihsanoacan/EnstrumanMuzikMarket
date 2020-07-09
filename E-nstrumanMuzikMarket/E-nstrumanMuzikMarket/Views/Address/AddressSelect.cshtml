@@ -1,0 +1,41 @@
+﻿@using DAL;
+@model List<Address>
+@{
+    ViewBag.Title = "AddressSelect";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="bg0 p-t-75 p-b-85">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+                <div class="m-l-25 m-r--38 m-lr-0-xl">
+                    <div class="wrap-table-shopping-cart">
+                        <table class="table-shopping-cart">
+                            <tr class="table_head">
+                               
+                                <th class="column-1">Adres Adı</th>
+                                <th class="column-2">Adres Detayı</th>
+                                <th class="column-3"></th>
+                            </tr>
+
+                            @foreach (Address item in Model)
+                            {
+                                <tr class="table_row">
+                                    <td class="column-1">@item.AddressName</td>
+                                    <td class="column-2">@item.AddressDetail</td>
+                                    <td><a href="@Url.Action("Index","Payment",new {addressId=item.ID })">Seç</a></td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+

@@ -35,3 +35,40 @@ F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\E-ns
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\BLL.dll.config
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\DAL.pdb
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\DAL.dll.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\E-nstrumanMuzikMarket.dll.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\E-nstrumanMuzikMarket.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\E-nstrumanMuzikMarket.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\Antlr3.Runtime.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\BLL.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\DAL.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\EntityFramework.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\EntityFramework.SqlServer.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\Microsoft.Web.Infrastructure.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\Newtonsoft.Json.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Helpers.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Mvc.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Optimization.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Razor.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.WebPages.Deployment.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.WebPages.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.WebPages.Razor.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\WebGrease.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\BLL.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\BLL.dll.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\DAL.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\DAL.dll.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\EntityFramework.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\EntityFramework.SqlServer.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Helpers.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Mvc.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Optimization.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.Razor.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.WebPages.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.WebPages.Deployment.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\System.Web.WebPages.Razor.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\Newtonsoft.Json.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\bin\Antlr3.Runtime.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\obj\Debug\E-nstrumanMuzikMarket.csprojAssemblyReference.cache
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\obj\Debug\E-nstrumanMuzikMarket.csproj.CopyComplete
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\obj\Debug\E-nstrumanMuzikMarket.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\E-nstrumanMuzikMarket\obj\Debug\E-nstrumanMuzikMarket.pdb

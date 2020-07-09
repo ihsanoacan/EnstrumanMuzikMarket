@@ -22,13 +22,14 @@
                                     <th class="column-1">Product</th>
                                     <th class="column-3">Price</th>
                                 </tr>
+                               
 
-                                
 
                                 @foreach (Product item in Model)
                                 {
-                                    total= total + item.UnitPrice;
-                                    
+
+                                    total = total + item.UnitPrice;
+
                                     <tr class="table_row">
                                         <td class="column-1">
                                             <div class="how-itemcart1">
@@ -40,9 +41,6 @@
                                     </tr>
 
                                 }
-
-
-
 
                             </table>
                         </div>
@@ -65,7 +63,7 @@
                             </div>
 
                             <div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
-                                
+
 
                                 <div class="p-t-15">
                                     <span class="stext-112 cl8">
@@ -104,10 +102,12 @@
                                 </span>
                             </div>
                         </div>
+                        <a href="@Url.Action("AddressSelect","Address")" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+                            Alışverişe Devam Edin
+                        </a>
+                        
 
-                        <button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
-                            Proceed to Checkout
-                        </button>
+
                     </div>
                 </div>
             </div>

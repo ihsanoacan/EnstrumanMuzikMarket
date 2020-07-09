@@ -83,6 +83,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnstrumanMuzikMarketModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>EnstrumanMuzikMarketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProduct.cs">
+      <DependentUpon>EnstrumanMuzikMarketModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>EnstrumanMuzikMarketModel.tt</DependentUpon>
     </Compile>

@@ -17,7 +17,13 @@
         <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Cities_City_ID" />
         <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Districts_District_ID" />
         <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Users_User_ID" />
-      </Diagram>
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.OrderProduct" Width="1.5" PointX="12.375" PointY="3.375" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Product" />
+        <EntityTypeShape EntityType="EnstrumanMuzikMarketDBModel.Order" Width="1.5" PointX="7.5" PointY="5.125" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_Order_Address" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_Order_User" />
+        <AssociationConnector Association="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Order" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

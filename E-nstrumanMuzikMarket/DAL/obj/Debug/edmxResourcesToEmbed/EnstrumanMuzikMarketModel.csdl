@@ -39,6 +39,24 @@
       <End Role="User" EntitySet="User" />
       <End Role="Address" EntitySet="Address" />
     </AssociationSet>
+    <EntitySet Name="OrderProduct" EntityType="EnstrumanMuzikMarketDBModel.OrderProduct" />
+    <AssociationSet Name="FK_OrderProduct_Product" Association="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="OrderProduct" EntitySet="OrderProduct" />
+    </AssociationSet>
+    <EntitySet Name="Order" EntityType="EnstrumanMuzikMarketDBModel.Order" />
+    <AssociationSet Name="FK_Order_Address" Association="EnstrumanMuzikMarketDBModel.FK_Order_Address">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_User" Association="EnstrumanMuzikMarketDBModel.FK_Order_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProduct_Order" Association="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderProduct" EntitySet="OrderProduct" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="City">
     <Key>
@@ -96,6 +114,7 @@
     <Property Name="ProductCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Category" Relationship="EnstrumanMuzikMarketDBModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
+    <NavigationProperty Name="OrderProduct" Relationship="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Product" FromRole="Product" ToRole="OrderProduct" />
   </EntityType>
   <Association Name="FK_Product_Category">
     <End Type="EnstrumanMuzikMarketDBModel.Category" Role="Category" Multiplicity="0..1" />
@@ -122,6 +141,7 @@
     <Property Name="BirthDate" Type="DateTime" Precision="3" />
     <Property Name="TcNo" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Address" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Users_User_ID" FromRole="User" ToRole="Address" />
+    <NavigationProperty Name="Order" Relationship="EnstrumanMuzikMarketDBModel.FK_Order_User" FromRole="User" ToRole="Order" />
   </EntityType>
   <EntityType Name="Address">
     <Key>
@@ -136,6 +156,7 @@
     <NavigationProperty Name="City" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Cities_City_ID" FromRole="Address" ToRole="City" />
     <NavigationProperty Name="District" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Districts_District_ID" FromRole="Address" ToRole="District" />
     <NavigationProperty Name="User" Relationship="EnstrumanMuzikMarketDBModel.FK_dbo_Addresses_dbo_Users_User_ID" FromRole="Address" ToRole="User" />
+    <NavigationProperty Name="Order" Relationship="EnstrumanMuzikMarketDBModel.FK_Order_Address" FromRole="Address" ToRole="Order" />
   </EntityType>
   <Association Name="FK_dbo_Addresses_dbo_Cities_City_ID">
     <End Type="EnstrumanMuzikMarketDBModel.City" Role="City" Multiplicity="0..1" />
@@ -170,6 +191,81 @@
       </Principal>
       <Dependent Role="Address">
         <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OrderProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Product_ID" Type="Int32" />
+    <Property Name="Order_ID" Type="Int32" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Product" FromRole="OrderProduct" ToRole="Product" />
+    <NavigationProperty Name="Order" Relationship="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Order" FromRole="OrderProduct" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK_OrderProduct_Product">
+    <End Type="EnstrumanMuzikMarketDBModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.OrderProduct" Role="OrderProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderProduct">
+        <PropertyRef Name="Product_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNo" Type="Guid" />
+    <Property Name="Address_ID" Type="Int32" />
+    <Property Name="User_ID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <Property Name="PaymentRefNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingNo" Type="Guid" />
+    <NavigationProperty Name="Address" Relationship="EnstrumanMuzikMarketDBModel.FK_Order_Address" FromRole="Order" ToRole="Address" />
+    <NavigationProperty Name="User" Relationship="EnstrumanMuzikMarketDBModel.FK_Order_User" FromRole="Order" ToRole="User" />
+    <NavigationProperty Name="OrderProduct" Relationship="EnstrumanMuzikMarketDBModel.FK_OrderProduct_Order" FromRole="Order" ToRole="OrderProduct" />
+  </EntityType>
+  <Association Name="FK_Order_Address">
+    <End Type="EnstrumanMuzikMarketDBModel.Address" Role="Address" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Address_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_User">
+    <End Type="EnstrumanMuzikMarketDBModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProduct_Order">
+    <End Type="EnstrumanMuzikMarketDBModel.Order" Role="Order" Multiplicity="0..1" />
+    <End Type="EnstrumanMuzikMarketDBModel.OrderProduct" Role="OrderProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderProduct">
+        <PropertyRef Name="Order_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

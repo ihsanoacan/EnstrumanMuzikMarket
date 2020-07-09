@@ -15,3 +15,20 @@ F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\Test
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\TestConsoleApp\obj\Debug\TestConsoleApp.csproj.CopyComplete
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\TestConsoleApp\obj\Debug\TestConsoleApp.exe
 F:\ihsan\Bilge Adam Dersler\E-NSTRUMAN MÜZİK MARKET\E-nstrumanMuzikMarket\TestConsoleApp\obj\Debug\TestConsoleApp.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\TestConsoleApp.exe.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\TestConsoleApp.exe
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\TestConsoleApp.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\BLL.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\DAL.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\EntityFramework.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\BLL.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\BLL.dll.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\DAL.pdb
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\DAL.dll.config
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\EntityFramework.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\obj\Debug\TestConsoleApp.csprojAssemblyReference.cache
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\obj\Debug\TestConsoleApp.csproj.CopyComplete
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\obj\Debug\TestConsoleApp.exe
+F:\ihsan\Bilge Adam Dersler\Repos\ihsan\EnstrumanMuzikMarket\E-nstrumanMuzikMarket\TestConsoleApp\obj\Debug\TestConsoleApp.pdb

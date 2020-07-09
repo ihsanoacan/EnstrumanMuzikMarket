@@ -64,9 +64,12 @@
     <Compile Include="Service\ICategoryService.cs" />
     <Compile Include="Service\ICityService.cs" />
     <Compile Include="Service\IDistrictService.cs" />
-    <Compile Include="Service\Igeneric.cs" />
+    <Compile Include="Service\IOrderProductService.cs" />
+    <Compile Include="Service\IOrderService.cs" />
     <Compile Include="Service\IProductService.cs" />
     <Compile Include="Service\IUserService.cs" />
+    <Compile Include="Service\OrderProductService.cs" />
+    <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\UserService.cs" />
   </ItemGroup>
