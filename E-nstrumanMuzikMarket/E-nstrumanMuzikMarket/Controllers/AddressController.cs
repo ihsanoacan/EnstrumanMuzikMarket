@@ -80,7 +80,7 @@ namespace E_nstrumanMuzikMarket.Controllers
 
         }
 
-        public ActionResult Update(int Id)
+        public ActionResult Update(int Id, int? cityId)
         {
             try
             {
@@ -93,6 +93,17 @@ namespace E_nstrumanMuzikMarket.Controllers
                 AddressService srv = new AddressService();
                 Address addressModel = srv.GetByID(Id);
 
+                ViewBag.cityList = new List<City>();
+                CityService cityService = new CityService();
+                ViewBag.cityList =cityService.GetAll().ToList();
+
+                int? relatedCityId = cityId != null ? cityId : addressModel.City_ID;
+                ViewBag.RelatedCityId = relatedCityId;
+                DistrictService districtService = new DistrictService();
+                List<District> dList = districtService.GetAll().ToList();
+                List<District> cdList = dList.Where(x => x.City_ID == relatedCityId).ToList();
+                ViewBag.districtList = cdList;
+
                 return View(addressModel);
             }
             catch (Exception ex)
@@ -102,7 +113,7 @@ namespace E_nstrumanMuzikMarket.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Address address)
+        public ActionResult Update(Address address)
         {
             try
             {
@@ -138,7 +149,7 @@ namespace E_nstrumanMuzikMarket.Controllers
                 }
 
                 AddressService srv = new AddressService();
-                Address addresses = srv.GetByID(Id);
+                
                 srv.Delete(Id);
                 srv.Save();
 

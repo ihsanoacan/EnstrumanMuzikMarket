@@ -1,5 +1,5 @@
 ﻿@using DAL;
-@model List<City>
+@model Address
 @{
     ViewBag.Title = "Update";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,7 +9,7 @@
     <div class="container">
         <div class="flex-w flex-tr">
             <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
-                <form method="post" action="@Url.Action("Update")">
+                <form method="post" action="@Url.Action("Update","Address")">
                     <h4 class="mtext-105 cl2 txt-center p-b-30">
                         Adresinizi Güncelleyin
                     </h4>
@@ -22,9 +22,9 @@
                                 Şehir Seçiniz
                             </option>
 
-                            @foreach (City item in Model)
+                            @foreach (City item in ViewBag.cityList )
                             {
-                                if (ViewBag.cityId == item.ID)
+                                if (ViewBag.RelatedCityId == item.ID)
                                 {
                                     <option value="@item.ID" selected>
                                         @item.CityName
@@ -54,9 +54,19 @@
 
                             @foreach (District item in ViewBag.districtList)
                             {
-                                <option value="@item.ID">
-                                    @item.DistrictName
-                                </option>
+                                if (item.ID == Model.District_ID)
+                                {
+                                    <option selected value="@item.ID">
+                                        @item.DistrictName
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@item.ID">
+                                        @item.DistrictName
+                                    </option>
+                                }
+
                             }
                         </select>
 
@@ -65,12 +75,12 @@
 
 
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="AddressDetail" placeholder="Adres Detayı" required>
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="AddressDetail" placeholder="Adres Detayı" value="@Model.AddressDetail" required>
 
                     </div>
 
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="AddressName" placeholder="Adres Adı" required>
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="AddressName" placeholder="Adres Adı"value="@Model.AddressName" required>
 
                     </div>
 
@@ -91,7 +101,7 @@
     $(document).ready(function () {
         $("#cId").on("change", function () {
         var selectedId = $(this).val();
-        window.location.href = '@Url.Action("Update", "Address")' + '?cityId=' + selectedId;
+        window.location.href = '@Url.Action("Update", "Address", new { Id = Model.ID })' + '?cityId=' + selectedId;
 })
     });
 </script>
