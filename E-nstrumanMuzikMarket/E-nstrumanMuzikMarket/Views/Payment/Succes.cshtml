@@ -1,0 +1,36 @@
+﻿@using DAL;
+@model Order
+@{
+    ViewBag.Title = "Succes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form class="bg0 p-t-75 p-b-85">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+                <div class="m-l-25 m-r--38 m-lr-0-xl">
+                    <div class="wrap-table-shopping-cart">
+                        <p><b>@Model.OrderNo </b>NOLU SİPARİŞİNİZ ALINMIŞTIR KARGO TAKİP NUMARINIZ :<b>@Model.ShippingNo</b></p>
+
+
+
+                        <p>Anasayfaya dönmek için <a href="@Url.Action("Index","Home")">Tıklayınız.</a> </p>
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+
+
+

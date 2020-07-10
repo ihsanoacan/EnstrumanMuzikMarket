@@ -1938,7 +1938,6 @@
     <Folder Include="Files\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Error\" />
-    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\web.config" />
@@ -2242,6 +2241,8 @@
     <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\Address\AddressSelect.cshtml" />
     <Content Include="Views\Payment\Index.cshtml" />
+    <Content Include="Views\Payment\Succes.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

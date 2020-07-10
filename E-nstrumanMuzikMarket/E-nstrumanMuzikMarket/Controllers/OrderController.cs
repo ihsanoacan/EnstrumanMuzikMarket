@@ -13,7 +13,19 @@ namespace E_nstrumanMuzikMarket.Controllers
         // GET: Order
         public ActionResult Index()
         {
-            return View();
+            if (Session["UserSession"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
+            User u = Session["UserSession"] as User;
+            OrderService orderService = new OrderService();
+            List<Order> order = orderService.GetAll().Where(x => x.User_ID ==u.ID).ToList();
+            OrderProductService opService = new OrderProductService();
+            List<OrderProduct> listOrderProduct = opService.GetAll().ToList();
+            ViewBag.opBag = listOrderProduct;
+            
+            return View(order);
         }
         public ActionResult Cart(int pId)
         {
@@ -38,13 +50,10 @@ namespace E_nstrumanMuzikMarket.Controllers
                 Session["Cart"] = productList;
             }
 
-
-
-            
-
             return RedirectToAction("Index", "Home");
 
-
         }
+        
+      
     }
 }
